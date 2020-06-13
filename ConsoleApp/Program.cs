@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
@@ -12,7 +13,7 @@ namespace ConsoleApp
             a = new TestDelegate(Method1);
             a = Method1;
 
-            a"hello");
+            a("hello");
             b = Method2;
 
             c = a + b;
@@ -49,6 +50,13 @@ namespace ConsoleApp
         {
             return "A class AMethod Called";
         }
+
+
+        public async Task methodName()
+        {
+            throw new NotImplementedException();
+        }
+
     }
 
     class B : A
@@ -85,12 +93,13 @@ namespace ConsoleApp
                 throw exception(matchedItem);
             }
         }
+
     }
 
     [Serializable]
     public class MyException : Exception
     {
-       
+       //Test exception
         public MyException() { }
         public MyException(string message) : base(message) { }
         public MyException(string message, Exception inner) : base(message, inner) { }
